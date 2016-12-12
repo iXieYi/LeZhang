@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-touch-fullscreen" content="yes"/>
+<meta name="apple-mobile-web-app-status-bar-style" content=blank/>
+<meta name="format-detection" content="telephone=no"/>
+<title>乐账</title>
+<link rel="apple-touch-icon-precomposed" href="images/haorooms.jpg"/>
+<link rel="apple-touch-startup-image" href="images/haorooms.jpg"/>
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+<section id="login-header">
+  <header></header>
+  <div></div>
+</section>
+<section class="logging">
+     <form>  
+        <ul class="bgf pl12 outborder">
+            <li class="pt12 pb12 border_bottom">
+            <s></s>
+            <input name="mobile" type="tel" placeholder="请输入您的手机号" id="login-Mobile">
+            <s class="warn" id="pass1_error" style="display:none;"></s>
+            </li>
+            <li class="pt12 pb12">
+            <s class="uc_logging_password"></s>
+            <input name="userpwd" type="password" placeholder="请输入您的密码" id="login-Password">
+            <s class="warn" id="pass_error" style="display:none;"></s>
+            </li>
+        </ul>
+        <div class="find_paw"><a href="#">忘记密码？</a></div>
+        <div class="btn_wrap" id="login_user">
+         <input  type="button" value="登录" disabled="disabled" class="btn" >  
+        </div>
+        </form>
+        <div class="quick_register">
+            <div><a href="#">快速注册&gt;</a></div>
+        </div>
+
+ </section>
+
+ <section class="else-login"> 
+  <div><span>其他方式登录</span></div>
+  <nav id="login-list">
+    <ul>
+      <li><a id="qq-login" href="#"><span></span></a></li>
+      <li><a id="weixin-login" href="#"><span></span></a></li>
+      <li><a id="taobao-login" href="#"><span></span></a></li>
+    </ul>
+  </nav>
+ </section>
+  <div class="overlay" id="overlay" style="display:none;"></div>
+  <div class="box" id="box">
+    <span id="mess"></span>
+  </div>
+
+<script src="js/jquery-3.1.1.js"></script>
+<script type="text/javascript">
+window.onload=function(){
+  var otxt=document.getElementById("login-Password");
+//  var oshow=document.getElementById("show");
+//  var count=0;
+  if(document.all){
+     otxt.onpropertychange=function(){
+    //   count=count+1;
+    //   oshow.innerHTML=count;
+        $(".btn").css({"background":"#07a4f1"});  
+        $(".btn").removeAttr("disabled");
+    }
+  }
+  else{
+    otxt.oninput=function(){
+  //    count=count+1;
+  //    oshow.innerHTML=count;
+      $(".btn").css({"background":"#07a4f1"});  
+      $(".btn").removeAttr("disabled");
+
+    }
+  }
+}
+
+//验证手机号码
+function checkPhone(){ 
+    var phone = document.getElementById('login-Mobile').value;
+  //  alert(phone);
+    if(!(/^1[34578]\d{9}$/.test(phone))){ 
+       // alert("手机号码有误，请重填");  
+        return false; 
+    } 
+    else{
+        return true; 
+    }
+}
+
+//提交时验证手机号码是否正确
+ $(".btn").click(function(){
+        //判断密码是否为空
+      //  alert(document.getElementById('login-Mobile').value);
+      var logMobile=document.getElementById('login-Mobile').value;
+      if(logMobile=="")
+      {
+        alertGray("账号不能为空"); 
+      }
+      else{
+            if(checkPhone())  
+            {  
+                //验证手机号正确,验证密码是否为空
+                $("form").submit(); 
+            }  
+            else
+            {
+              
+            alertGray("账号只支持手机");
+            //验证码不正确,表单不允许提交             
+            } 
+        }
+ });
+
+/*************************登录判断函数*******************************/
+function isSubmitCallback(isSumbit){
+  if(isSumbit=="")
+  {
+    alertGray("账号与密码不匹配");
+  }
+
+
+}
+/********************************************************************/
+function alertGray(mess){
+ $('#overlay').fadeIn('fast', function () {
+                        $('#box').animate({ 'top': '60px' }, 500);
+$("#mess").html(mess); 
+setTimeout("alertGrayclose()",2000);//2秒消失，可以改动
+
+                    });
+}
+
+function alertGrayclose(){
+ $('#box').animate({ 'top': '-500px' }, 500, function () {
+                        $('#overlay').fadeOut('fast');
+                    });
+}
+</script>
+</body>
+</html>

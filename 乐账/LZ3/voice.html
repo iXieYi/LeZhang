@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-touch-fullscreen" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content=#ff5353/>
+    <meta name="format-detection" content="telephone=no"/>
+    <title>声音界面</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<!--语音输入界面-->
+<div id="voice-page">
+<header id="voice-header">
+	<div id="voice-close-icon"><span></span></div>
+	<p>按住说话 松开记账</p>
+</header>
+<div id="voice-images"><span></span></div>
+
+
+
+
+
+
+
+
+<footer>
+	<div id="voice-btn"><span></span><p>按住说话</p></div>
+</footer>
+
+</div>
+<script src="js/jquery-3.1.1.js"></script>	  
+<script src="js/jquery-account.js"></script>
+<script type="text/javascript">
+var voiceBtn=document.getElementById("voice-btn");
+	voiceBtn.addEventListener('touchstart', function(event) {
+     // 如果这个元素的位置内只有一个手指的话
+     $("#voice-header").find("p").html("正在听");
+        }
+}, false);    
+</script>
+</body>
+</html>
+ 

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-touch-fullscreen" content="yes"/>
+<meta name="apple-mobile-web-app-status-bar-style" content=blank/>
+<meta name="format-detection" content="telephone=no"/>
+<title>报表</title>
+<link rel="apple-touch-icon-precomposed" href="images/haorooms.jpg"/>
+<link rel="apple-touch-startup-image" href="images/haorooms.jpg"/>
+<link rel="stylesheet" href="css/style.css">
+<style type="text/css">
+
+</style>
+
+</head>
+<body>
+
+<canvas id="bingtu" width="1000" height="200" style="border:1px solid #c3c3c3;">
+Your browser does not support the canvas element.
+</canvas>
+<div id="chart-list">
+    <ul>
+        <li></li>
+    </ul>
+</div>
+<script type="text/javascript">
+
+var color = ["red","yellow"]; var data = [20,80];
+var myCanvas=document.getElementById("bingtu");
+var ctx=myCanvas.getContext("2d");
+var n=0;
+var timer=null;
+var startPoint= 1.5 * Math.PI;//起始点 ;//1.5 * Math.PI;//起始点  
+
+function drawCircle(n){
+ctx.lineWidth = 25;     
+//var num=n;
+//for(var i=0;num>data[i];i++){num=num-data[i];}
+            ctx.strokeStyle = color[n]; 
+            ctx.beginPath(); 
+            ctx.arc(100,100,50,startPoint,startPoint+Math.PI*2/100*data[n]);
+            ctx.stroke();
+            ctx.closePath();
+            startPoint =startPoint+Math.PI*2/100*data[n];       
+}
+
+    function loadCanvas(){
+        timer = setInterval(function(){
+            if(n>data.length){
+                clearInterval(timer);
+            }else{
+                drawCircle(n);
+                n++;
+            }
+        },20);
+    }
+    loadCanvas();
+    timer=null;
+/*
+
+var color = ["red","yellow","blue","green"]; var data = [25,25,50,0];
+var startPoint= 1.5 * Math.PI;;//起始点 ;//1.5 * Math.PI;//起始点 
+function drawCircle(){ 
+var c=document.getElementById("myCanvas");
+var ctx=c.getContext("2d");
+ctx.lineWidth = 25;
+for(var i=0;i<data.length;i++){           
+            ctx.strokeStyle = color[i]; 
+            ctx.beginPath(); 
+            ctx.arc(320,200,50,startPoint,startPoint+Math.PI*2/100*data[i] );
+            ctx.stroke();
+            ctx.closePath();
+            startPoint =startPoint+Math.PI*2/100*data[i];  }          
+        }
+drawCircle();
+
+
+
+
+
+*/
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+{
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "7FDAFA44B3C88DDC31742CBD207772465B5422DF" : 0,
+    "2D1ACCEAE732CB96126BBC7C4BE3B2C8143889D2" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "02D9068E-38CF-4F52-9EA7-BD5C84FD4D82",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "7FDAFA44B3C88DDC31742CBD207772465B5422DF" : "..",
+    "2D1ACCEAE732CB96126BBC7C4BE3B2C8143889D2" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "乐账",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "乐账.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/iXieYi\/LeZhang.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "2D1ACCEAE732CB96126BBC7C4BE3B2C8143889D2"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/git.oschina.net\/xieyieason\/LeZhang.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "7FDAFA44B3C88DDC31742CBD207772465B5422DF"
+    }
+  ]
+}

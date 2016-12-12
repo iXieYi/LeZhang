@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style type="text/css">
+
+header, footer, main {
+    display: block;
+}
+.historyBill-header {
+    position: fixed;
+    height: 50px;
+    left: 0;
+    right: 0;
+    top: 0;
+}
+
+footer {
+    position: fixed;//或者写成absolute
+    height: 34px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+main {
+/* main绝对定位，进行内部滚动 */
+position: absolute;
+top: 50px;
+bottom: 34px;
+/* 使之可以滚动 */
+ overflow-y: scroll;
+  /* 增加该属性，可以增加弹性，是滑动更加顺畅 */
+  -webkit-overflow-scrolling: touch;   
+}
+
+main .content {
+    height: 2000px;
+}
+</style>
+</head>
+<body class="historyBill-header">
+    <!-- fixed定位的头部 (absolute绝对定位也可以)-->
+    <header>
+
+    </header>
+
+    <!-- 可以滚动的区域 -->
+    <main>
+        <div class="content">
+        <!-- 内容在这里... -->
+        </div>
+    </main>
+
+    <!-- fixed定位的底部 （absolute绝对定位也可以）-->
+    <footer>
+        <input type="text" placeholder="Footer..."/>
+        <button class="submit">提交</button>
+    </footer>
+</body>
+</html>

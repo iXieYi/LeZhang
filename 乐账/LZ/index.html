@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-touch-fullscreen" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content=#ff5353/>
+    <meta name="format-detection" content="telephone=no"/>
+    <title>乐账</title>
+   // <link rel="apple-touch-icon-precomposed" href="images/haorooms.jpg"/>
+   // <link rel="apple-touch-startup-image" href="images/haorooms.jpg"/>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery-3.1.1.js"></script>
+    <script src="js/jquery-bar.js"></script>
+</head>
+<body>
+<div id="slide-bar">
+    <hearder class="slide-bar-header">
+    
+    </hearder >
+    <nav class="function-list">
+    <ul>
+      <li class="fl"><a href=""><span>功能1</span></a></li>
+      <li class="fl"><a href=""><span>功能1</span></a></li>
+      <li class="fl"><a href=""><span>功能1</span></a></li>
+      <li class="fl"><a href=""><span>功能1</span></a></li>
+      <li class="fl"><a href=""><span>功能1</span></a></li>
+    </ul>
+
+    </nav>
+
+
+
+
+  </div>
+
+  <div id="slide-bar-hide"></div>
+	<header class="header-bar">
+		<div class="head-titile">
+			<span class="bar-menu-icon" href=""></span>
+			<h3>乐账</h3>
+			<div class="bar-ele"></div>
+		</div>
+		<div class="header-nav">
+			<ul class="navlist">
+				<li class="bar-outlay"><a href="outlay.html"><span></span></a></li>
+				<li class="bar-income"><a href="income.html"><span></span></a></li>
+			</ul>
+		</div>
+	</header>
+	<section class="count0">
+     <ul>
+        <li>
+             <a href="#">
+             <div class=" fl"><span>今日总支出</span></div>
+             <div class="rightimages fr">
+					
+
+             </div>
+
+             </a>
+         </li>
+         <li>
+            <a href="#">
+            <div class="leftimages fl"></div>
+    		<div>
+              	<p class="ptitle pl10">消费分类</p>
+               	<p class="pdes pl10 ">这里是细分类</p>
+            </div>
+            <div class="price fr"><span>-2.0</span></div>
+           </a>
+         </li>
+         <li>
+            <a href="#">
+	         	<div class="leftimages fl"></div>
+	    		<div>
+	              	<p class="ptitle pl10">消费分类</p>
+	               	<p class="pdes pl10 ">这里是细分类</p>
+	            </div>
+	            <div class="price fr"><span>-2.0</span></div>
+           </a>
+         </li>
+           <li>
+            <a href="#">
+            	<div class="leftimages fl"></div>
+    			<div>
+              		<p class="ptitle pl10">消费分类</p>
+              	 	<p class="pdes pl10 ">这里是细分类</p>
+           	 	</div>
+           	 	<div class="price fr"><span>-2.0</span></div>
+               
+           </a>
+         </li>
+     </ul>	
+<div>
+    <center>
+         <img src="testImage.png" id="changeImage"style="width: 40%; height: 30%;" onclick="getIOSImage()"><!--src="图片的相对路径" 如果把html文件导入工程中，图片路径和OC一样只写图片名字和后缀就可以，（记得要先把图片添加到工程） 图片也可以实现按钮的方法getIOSImage -->
+    </center>
+        </div>
+   <input type="text" id="printName" name="printName" style="width: 30%; height: 30%;" value="" >
+
+
+</section >
+<section class="footer">
+	<div>
+    <a class="photo-icon" onclick="callCamera()" href="#"><span></span></a>
+    <a class="voice-icon" onclick="videoCallback()" href="#"><span></span></a>
+    <a class="edit-icon" href="account.html"><span></span></a>
+		
+	</div>
+</section>
+<script>
+    
+//JS调用iOS 与iOS回调 不要放在一个函数里，不然会造成多次调运iOS方法
+  function callCamera(imagePath){
+   //body内是js给原生发送的字符串
+    window.webkit.messageHandlers.AppModel.postMessage({body: 'callCamera....'});
+    
+   }
+  function picCallback(imagePath){
+    //document.getElementById('changeImage').src = arguments['imagePath'];
+    //window.webkit.messageHandlers.AppModel.postMessage({body: 'js come on'});
+    document.getElementById('changeImage').src = imagePath;//直接赋图片路径
+  }
+
+
+   function videoCallback(message){
+       
+   //  window.webkit.messageHandlers.AppModel.postMessage({body: 'callVideo....'}
+      document.getElementById('printName').value += message;
+
+    
+  }
+</script>
+</body>
+</html>

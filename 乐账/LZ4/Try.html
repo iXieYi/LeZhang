@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-touch-fullscreen" content="yes"/>
+<meta name="apple-mobile-web-app-status-bar-style" content=blank/>
+<meta name="format-detection" content="telephone=no"/>
+<title>报表</title>
+<link rel="apple-touch-icon-precomposed" href="images/haorooms.jpg"/>
+<link rel="apple-touch-startup-image" href="images/haorooms.jpg"/>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body  >
+<div id="chart">
+	<header id="chart-header" class="header-common">
+		<select name="chart-select" class="chart-select">
+			<option value="分类">分类</option>
+			<option value="成员">成员</option>
+		</select>
+	</header>	
+	<div class="class-btn">
+		<div class="btn-1 fl">支出</div><div class="btn-2 fl">收入</div>
+		<div class="bottom-slide-btn"></div>
+		</div>
+	<div class="date-btn">
+		
+	</div>
+	<section class="chart-main">
+	<div id="pie-chart"><canvas id="bingtu" width="1000" height="200" style="border:1px solid #c3c3c3;">
+		Your browser does not support the canvas element.
+		</canvas>
+ 	</div>
+		
+	</section>
+</div>
+  <!--最下一行图标-->
+<section class="footer">
+      <div class="edit-icon fl" ><span></span><p>记账</p></div>
+      <div class="chart-icon fl" ><span></span><p>报表</p></div>
+      <div class="wallet-icon fl" ><span></span><p>钱包</p></div>
+      <div class="user-icon fl" ><span></span><p>用户</p></div>
+</section>
+<script src="js/jquery-3.1.1.js"></script>
+<script type="text/javascript">
+var chartHeight;
+var winWidth,winHeight;
+//var winHeight;
+// 获取窗口宽度 
+
+if (window.innerWidth) 
+winWidth = window.innerWidth; 
+else if ((document.body) && (document.body.clientWidth)) 
+winWidth = document.body.clientWidth; 
+
+// 获取窗口高度 
+if (window.innerHeight) 
+winHeight = window.innerHeight; 
+else if ((document.body) && (document.body.clientHeight)) 
+winHeight = document.body.clientHeight; 
+// 通过深入 Document 内部对 body 进行检测，获取窗口大小 
+if (document.documentElement && document.documentElement.clientHeight && document.documentElement.clientWidth) 
+{ 
+winHeight = document.documentElement.clientHeight; 
+winWidth = document.documentElement.clientWidth; 
+}
+//自动适应当前窗口高度
+chartHeight=winHeight-176-44+"px" ;
+$("#pie-chart").css("height",chartHeight);
+
+
+  $(".btn-2").click(function(){
+    $(".bottom-slide-btn").animate({left:'50%'});
+  });
+   $(".btn-1").click(function(){
+    $(".bottom-slide-btn").animate({left:'0px'});
+  });
+/*画图*/
+var color = ["red","yellow"]; var data = [20,80];
+var myCanvas=document.getElementById("bingtu");
+var ctx=myCanvas.getContext("2d");
+myCanvas.height=winHeight-176-44;
+myCanvas.width=winWidth;
+var timer=null;
+var startPoint= 1.5 * Math.PI;//起始点 ;//1.5 * Math.PI;//起始点  
+var totalAmount="1000.00";
+//alert();
+
+function drawCircle(i){
+	var cicleX=winWidth/2;
+	var cicleY=(winHeight-176-44)/2;
+	var cicleRadius=winWidth/5;
+	
+	ctx.lineWidth =cicleRadius/2 ;     
+    ctx.strokeStyle = color[i]; 
+    ctx.beginPath(); 
+    ctx.arc(cicleX,cicleY,cicleRadius,startPoint,startPoint+Math.PI*2/100*data[i]);
+    ctx.stroke();
+    ctx.closePath();
+    startPoint =startPoint+Math.PI*2/100*data[i];       
+}
+
+    function loadCanvas(){
+    	var i=0;
+    	ctx.fillStyle = "black"; 
+ctx.font = "bold 10pt Arial";  // 字体大小，样式
+ctx.textAlign = 'center';  // 位置
+      //  ctx.textBaseline = 'middle';
+ctx.fillText("总支出", winWidth/2, (winHeight-176-44)/2);
+ctx.fillText(totalAmount, winWidth/2, (winHeight-176-44)/2+15);
+ctx.fill();
+        timer = setInterval(function(){
+            if(i>data.length){
+                clearInterval(timer);
+            }else{
+                drawCircle(i);
+                i++;
+            }
+        },40);
+    }
+    loadCanvas();
+    timer=null;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,271 @@
+@charset "UTF-8";
+/* CSS Document */
+*{
+	margin: 0;
+	padding: 0;	
+}
+.fl{
+	float: left;
+}
+.fr{
+	float: right;
+}
+li{list-style: none;
+}
+body{
+  font-family: "方正黑体简体",Tahoma,Verdana;
+  font-size: 14px;
+  line-height: 18px;
+  }
+/*slide-bar*/
+#slide-bar{
+	width: 70%;
+	height: 100%;
+	z-index:3;
+	background-color: white;
+	position: absolute;
+	top: 0px;left: 0px;
+	display: none;
+}
+.slide-bar-header{
+	width: 100%;
+	height: 20%;
+	background-color:#07a4f1;
+	position: absolute;
+	top: 0px;left: 0px;
+
+
+}
+.function-list,.function-list>ul{
+	width: 100%;
+	position: absolute;
+	top: 20%;left:0px;
+	margin-top: 5px;
+}
+.function-list>ul>li{
+	width: 100%;
+	margin-left: 10px;
+	height: 30px;
+}
+
+#slide-bar-hide{
+	width: 40%;
+	height: 100%;
+	z-index:2;
+	background-color:#000;  
+  	filter:alpha(opacity=50);  
+  	-moz-opacity:0.5;  
+ 	opacity:0.5; 
+	position: absolute;
+	top: 0px;right: 0px;
+	display: none;
+}
+/*index header*/
+.header-bar{
+	width: 100%;
+	position: fixed;
+	top: 0px;
+	background-color:#07a4f1;
+	color: white;
+}
+.bar-menu-icon{
+	display: inline-block;
+	vertical-align: middle;
+	background: url(../images/menu_li.png) no-repeat;
+	height: 30px;width: 30px;
+	background-size: 40px auto;
+	background-position: -3px -5px;
+
+}
+
+.outlay-header>h3,.income-header>h3,.head-titile>h3,.account-header>h3{
+	display: inline-block;
+	vertical-align: middle;
+	letter-spacing:1px;
+}
+.navlist{
+    position: relative;
+    height: 50px; 
+}
+
+.navlist>li{
+	float: left;
+	height: 50px;
+    margin: 0;
+    width: 50%;
+    list-style: none;
+}
+.navlist>li>a{
+	width: 100%;
+    display: inline-block;
+    text-align: center; 
+
+    
+}
+.navlist>li>a>span {
+    display: inline-block;
+    width: 30px;
+    height: 20px;
+ 
+}
+.bar-outlay>a {
+ border-right: 1px solid white;
+ 
+}
+.bar-outlay>a>span {
+ 	background:url(../images/wenzi.png) no-repeat;
+    background-size: 46px auto;
+    background-position: -6px -1px;
+ 
+}
+.bar-income>a>span{
+	background:url(../images/wenzi.png) no-repeat;
+    background-size: 46px auto;
+    background-position:-5px -25px;
+ 
+}
+
+.income-header,.outlay-header,.account-header{
+	width: 100%;
+	height: 34px;
+	position: fixed;
+	background-color:#07a4f1;
+	color: white;
+}
+.white-per-arrow{
+	display: inline-block;
+	vertical-align: middle;
+	background: url(../images/back.png) no-repeat;
+	height: 30px;width: 30px;
+	background-size: 40px auto;
+	background-position: 0 -5px;
+
+}
+/*index footer*/
+.footer{
+	position: fixed;
+	bottom: 0px;
+	width: 100%;
+}
+.footer>div{
+	margin: 8px;
+	height: 34px;
+	background-color: #07a4f1;
+}
+
+.photo-icon,.voice-icon,.edit-icon{
+	position: relative;
+	height: 34px;
+}
+.photo-icon,.voice-icon,.edit-icon{
+	display: inline-block;
+	vertical-align: middle;		
+}
+.photo-icon>span,.edit-icon>span{
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	top: 50%;left: 50%;
+	margin-top:-15px;
+	margin-left:-15px;
+}
+.voice-icon>span{
+	width: 100px;
+	height: 30px;
+	position: absolute;
+	top: 50%;left: 50%;
+	margin-top:-15px;
+	margin-left:-50px;
+}
+.photo-icon{width: 14%;}.voice-icon{width: 70%;}.edit-icon{width: 14%;}
+
+.photo-icon>span{
+	background: url(../images/photo.png) no-repeat;
+	background-size: 40px auto;
+	background-position:-7px -5px;
+}
+
+.voice-icon>span{
+	background: url(../images/voice.png) no-repeat;
+	background-size: 80px auto;
+	background-position: 7px -21px;
+}
+.voice-icon{
+	border-right: 2px solid white; 
+	border-left: 2px solid white; 
+}
+
+.edit-icon>span
+{
+	background: url(../images/ic_edit.png) no-repeat;
+	background-size: 30px auto;
+	background-position: 1px 3px;	
+}
+/*index.count0*/
+a:link {color: black; text-decoration: none}
+a:active {color: black; text-decoration: none}
+a:visited {color: black; text-decoration: none}
+a:hover {color: black; text-decoration: none}
+.count0{
+	position: absolute;
+	top: 62px;
+	left: 0;
+	width: 100%;
+	overflow: hidden;
+	/*margin: 0px auto 5px auto;*/
+	overflow: hidden;
+	background-color: #e9e4e4;
+}
+
+.count0 ul{
+	width: 100%;
+	
+}
+.footer>div,.count0 li {
+	margin: 8px;
+}
+.count0 li {
+  /*  min-height: 125px;*/
+    overflow: hidden;
+    background-color: white;
+    border: 1px solid #f2f2f2;
+    position: relative;
+}
+.count0 li a {
+    width: 100%;
+    display: block;
+    overflow: hidden; 
+
+  }
+.leftimages{
+    width: 50px;height: 50px;
+    background: url(../images/plan.png) no-repeat;
+    background-size: 60px auto;
+    background-position:-4px -10px;
+    margin: 20px; 
+}
+/*aoxout*/
+
+#account-num{
+	position: relative;
+	top: 34px;
+	width: 100%;
+	height: 34px;
+}
+
+/*
+#num-text>input
+{
+	width:100%;
+	height: 34px;
+
+	
+  	border-top-style: none;//去掉上边框
+    border-right-style: none;//去掉右边框
+    border-left-style: none;//去掉左边框
+    border-bottom-style: none;//去掉下边框
+    border: none;
+	
+	
+}
+*/

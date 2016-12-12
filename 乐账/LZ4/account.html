@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-touch-fullscreen" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content=#ff5353/>
+    <meta name="format-detection" content="telephone=no"/>
+    <title>记账</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/jquery-3.1.1.js"></script>
+    
+</head>
+<body  onload="onLoad()">
+	<header class="account-header">
+		<span class="close-icon"></span>
+		<h3>记账</h3>
+	</header>
+	<section id="account-num">
+		<div id="num-class" class=""><span class="num-class-img"></span><p id="num-class-p">类别</p></div><!--
+		--><div id="num-text" class=""><input type="text" id="screenName" name="screenName" maxlength="8" value="0.00" ></div>
+	</section>
+	<section id="account-class">
+		<span id="account-outlay" class="class-on">支出</span>
+		<span id="account-income" class="class-off">收入</span>
+	</section>
+	<section id="account-img">
+		<ul id="account-out-ul">
+		<li class="aimg-0 aimgs"><span class="img-0-out"></span><p>图片0</p></li>
+      <li class="aimg-1 aimgs"><span class="img-1-out"></span><p>图片1</p></li>
+      <li class="aimg-2 aimgs"><span class="img-2-out"></span><p>图片2</p></li>
+      <li class="aimg-3 aimgs"><span class="img-3-out"></span><p>图片3</p></li>
+      <li class="aimg-4 aimgs"><span class="img-4-out"></span><p>图片4</p></li>
+      <li class="aimg-5 aimgs"><span class="img-5-out"></span><p>图片5</p></li>
+      <li class="aimg-6 aimgs"><span class="img-6-out"></span><p>图片6</p></li>
+      <li class="aimg-7 aimgs"><span class="img-7-out"></span><p>图片7</p></li>
+      <li class="aimg-8 aimgs"><span class="img-8-out"></span><p>图片8</p></li>
+      <li class="aimg-9 aimgs"><span class="img-9-out"></span><p>图片9</p></li> 
+		</ul>	
+	    <ul id="account-in-ul">
+	<li class="aimg-0 aimgs"><span class="img-0-in"></span><p>收入图片0</p></li>
+      <li class="aimg-1 aimgs"><span class="img-1-in"></span><p>收入图片1</p></li>
+      <li class="aimg-2 aimgs"><span class="img-2-in"></span><p>收入图片2</p></li>
+      <li class="aimg-3 aimgs"><span class="img-3-in"></span><p>收入图片3</p></li>
+      <li class="aimg-4 aimgs"><span class="img-4-in"></span><p>收入图片4</p></li>
+      <li class="aimg-5 aimgs"><span class="img-5-in"></span><p>收入图片5</p></li>
+      
+		</ul>		
+	</section>
+	<section id="remark-information">
+		<input type="text" id="remarkInput" name="remarkInput" value="请输入备注信息">
+		<div id="voice-icon"><span></span></div>
+	</section>
+	<section id="save-btn">
+		<div>保存</div>
+	</section>
+
+
+
+
+
+
+
+
+
+
+
+
+  		<div id="calculator" class="keys">
+    	<!-- operators and other keys -->
+   		 <!--第一排-->
+	   		<input type="button" id="7" onclick="jsq(this.id)" value="7" class="buttons">
+	   		<input type="button" id="8" onclick="jsq(this.id)" value="8" class="buttons">
+	    	<input type="button" id="9" onclick="jsq(this.id)" value="9" class="buttons">
+	    	<input type="button" id="+" onclick="jsq(this.id)" value="+" class="buttons">
+	     <!--第二排-->
+	    	<input type="button" id="4" onclick="jsq(this.id)" value="4" class="buttons">
+		    <input type="button" id="5" onclick="jsq(this.id)" value="5" class="buttons">
+		    <input type="button" id="6" onclick="jsq(this.id)" value="6" class="buttons">
+		    <input type="button" id="-" onclick="jsq(this.id)" value="-" class="buttons">
+		    <!--第三排-->
+		    <input type="button" id="1" onclick="jsq(this.id)" value="1" class="buttons">
+		    <input type="button" id="2" onclick="jsq(this.id)" value="2" class="buttons">
+		    <input type="button" id="3" onclick="jsq(this.id)" value="3" class="buttons">
+		    <input type="button" id="eva" onclick="eva()" value="确认" class="buttons buttons-ok">
+		    <!--第四排-->
+		    <input type="button" id="." onclick="jsq(this.id)" value="." class=" buttons">
+		    <input type="button" id="0" onclick="jsq(this.id)" value="0" class="buttons">
+		    <input type="button" id="Back" onclick="tuiGe()" value="Back" class="buttons">
+	  </div>
+
+
+
+
+<script src="js/jquery-3.1.1.js"></script>	  
+<script src="js/jquery-account.js"></script>
+<script type="text/javascript">
+	//点击保存按钮
+$(#"save-btn").click(function(){
+    var money=document.getElementById("screenName");
+    var classP=document.getElementById("num-class-p");
+    if(money==""){
+        alertGray("金额不能为0");
+    }
+    else if(classP="类别"){       
+         alertGray("类别不能为空");
+    }
+});
+</script>
+</body>
+</html>
+ 

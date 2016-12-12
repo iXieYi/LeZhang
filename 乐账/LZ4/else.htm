@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-touch-fullscreen" content="yes"/>
+<meta name="apple-mobile-web-app-status-bar-style" content=blank/>
+<meta name="format-detection" content="telephone=no"/>
+<title>报表</title>
+<link rel="apple-touch-icon-precomposed" href="images/haorooms.jpg"/>
+<link rel="apple-touch-startup-image" href="images/haorooms.jpg"/>
+<link rel="stylesheet" href="css/style.css">
+<style type="text/css">
+
+</style>
+
+</head>
+<body>
+
+<canvas id="myCanvas" width="2000" height="1000" style="border:1px solid #c3c3c3;">
+Your browser does not support the canvas element.
+</canvas>
+
+<script type="text/javascript">
+
+var color = ["red"]; var data = [100];
+var c=document.getElementById("myCanvas");
+var ctx=c.getContext("2d");
+var n=0;
+var timer=null;
+function drawCircle(cur){ 
+
+var startPoint= 1.5 * Math.PI;;//起始点 ;//1.5 * Math.PI;//起始点 
+ctx.lineWidth = 25;
+for(var i=0;i<data.length;i++){ 
+            
+            ctx.strokeStyle = color[i]; 
+            ctx.beginPath(); 
+            ctx.arc(320,200,50,startPoint,startPoint+Math.PI*2/100*data[i]*cur);
+            ctx.stroke();
+            ctx.closePath();
+            startPoint =startPoint+Math.PI*2/100*data[i];  }          
+}
+
+    function loadCanvas(nowT){
+        timer = setInterval(function(){
+            if(n>nowT){
+                clearInterval(timer);
+            }else{
+                drawCircle(n);
+                n += 0.01;
+            }
+        },15);
+    }
+    loadCanvas(100/100);
+    timer=null;
+/*
+
+var color = ["red","yellow","blue","green"]; var data = [25,25,50,0];
+var startPoint= 1.5 * Math.PI;;//起始点 ;//1.5 * Math.PI;//起始点 
+function drawCircle(){ 
+var c=document.getElementById("myCanvas");
+var ctx=c.getContext("2d");
+ctx.lineWidth = 25;
+for(var i=0;i<data.length;i++){           
+            ctx.strokeStyle = color[i]; 
+            ctx.beginPath(); 
+            ctx.arc(320,200,50,startPoint,startPoint+Math.PI*2/100*data[i] );
+            ctx.stroke();
+            ctx.closePath();
+            startPoint =startPoint+Math.PI*2/100*data[i];  }          
+        }
+drawCircle();
+
+
+
+
+
+*/
+
+</script>
+
+</body>
+</html>
