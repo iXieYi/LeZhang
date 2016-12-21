@@ -64,7 +64,7 @@
 		8AB6D5331DDD964E00428B54 /* BaiduMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AB6D5321DDD964E00428B54 /* BaiduMapViewController.m */; };
 		8AB6D5341DDD973B00428B54 /* BaiduMapAPI_Map.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AB6D5141DDD905900428B54 /* BaiduMapAPI_Map.framework */; };
 		8ACEBD341DEDC341009CCC40 /* LZ2 in Resources */ = {isa = PBXBuildFile; fileRef = 8ACEBD331DEDC341009CCC40 /* LZ2 */; };
-		8ACEBD381DF5BDFC009CCC40 /* LZ3 in Resources */ = {isa = PBXBuildFile; fileRef = 8ACEBD371DF5BDFC009CCC40 /* LZ3 */; };
+		8ACEBD381DF5BDFC009CCC40 /* LZ_Test in Resources */ = {isa = PBXBuildFile; fileRef = 8ACEBD371DF5BDFC009CCC40 /* LZ_Test */; };
 		8ACEBD611DF712F3009CCC40 /* LZ4 in Resources */ = {isa = PBXBuildFile; fileRef = 8ACEBD601DF712F3009CCC40 /* LZ4 */; };
 		8AD33C761DE3EBC7001300A2 /* LZ1 in Resources */ = {isa = PBXBuildFile; fileRef = 8AD33C751DE3EBC7001300A2 /* LZ1 */; };
 		8AE262261DD09C7400D70850 /* DUI_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE262251DD09C7400D70850 /* DUI_ViewController.m */; };
@@ -177,7 +177,7 @@
 		8AB6D5311DDD964E00428B54 /* BaiduMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaiduMapViewController.h; sourceTree = "<group>"; };
 		8AB6D5321DDD964E00428B54 /* BaiduMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaiduMapViewController.m; sourceTree = "<group>"; };
 		8ACEBD331DEDC341009CCC40 /* LZ2 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = LZ2; sourceTree = "<group>"; };
-		8ACEBD371DF5BDFC009CCC40 /* LZ3 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = LZ3; sourceTree = "<group>"; };
+		8ACEBD371DF5BDFC009CCC40 /* LZ_Test */ = {isa = PBXFileReference; lastKnownFileType = folder; path = LZ_Test; sourceTree = "<group>"; };
 		8ACEBD601DF712F3009CCC40 /* LZ4 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = LZ4; sourceTree = "<group>"; };
 		8AD33C751DE3EBC7001300A2 /* LZ1 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = LZ1; sourceTree = "<group>"; };
 		8AE262241DD09C7400D70850 /* DUI_ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DUI_ViewController.h; sourceTree = "<group>"; };
@@ -480,7 +480,7 @@
 			isa = PBXGroup;
 			children = (
 				8ACEBD601DF712F3009CCC40 /* LZ4 */,
-				8ACEBD371DF5BDFC009CCC40 /* LZ3 */,
+				8ACEBD371DF5BDFC009CCC40 /* LZ_Test */,
 				8ACEBD331DEDC341009CCC40 /* LZ2 */,
 				8AD33C751DE3EBC7001300A2 /* LZ1 */,
 				8A632B281DE3E1AE004B7F88 /* LZ */,
@@ -617,7 +617,7 @@
 				8AE8952D1DD34BED008DB7F9 /* OCRimage.jpg in Resources */,
 				8ACEBD611DF712F3009CCC40 /* LZ4 in Resources */,
 				8AFBFF141DD38DAB00B138FA /* 2.jpg in Resources */,
-				8ACEBD381DF5BDFC009CCC40 /* LZ3 in Resources */,
+				8ACEBD381DF5BDFC009CCC40 /* LZ_Test in Resources */,
 				8AD33C761DE3EBC7001300A2 /* LZ1 in Resources */,
 				8A89F5EC1DD019D500CBFBFE /*  .xcassets in Resources */,
 				8A632B211DE2D67E004B7F88 /* JSCallOC.html in Resources */,

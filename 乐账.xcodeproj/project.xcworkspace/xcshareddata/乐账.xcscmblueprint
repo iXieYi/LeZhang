@@ -1,15 +1,20 @@
 {
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "2D1ACCEAE732CB96126BBC7C4BE3B2C8143889D2+++59065DE",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
 
   },
   "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
-    "7FDAFA44B3C88DDC31742CBD207772465B5422DF" : 0,
-    "2D1ACCEAE732CB96126BBC7C4BE3B2C8143889D2" : 0
+    "2D1ACCEAE732CB96126BBC7C4BE3B2C8143889D2+++59065DE" : 0,
+    "7FDAFA44B3C88DDC31742CBD207772465B5422DF+++CFEA65C" : 0,
+    "7FDAFA44B3C88DDC31742CBD207772465B5422DF+++79DA790" : 0,
+    "7FDAFA44B3C88DDC31742CBD207772465B5422DF+++F576F9F" : 0
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "02D9068E-38CF-4F52-9EA7-BD5C84FD4D82",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
-    "7FDAFA44B3C88DDC31742CBD207772465B5422DF" : "..",
-    "2D1ACCEAE732CB96126BBC7C4BE3B2C8143889D2" : ""
+    "2D1ACCEAE732CB96126BBC7C4BE3B2C8143889D2+++59065DE" : "LeZhang\/",
+    "7FDAFA44B3C88DDC31742CBD207772465B5422DF+++CFEA65C" : "",
+    "7FDAFA44B3C88DDC31742CBD207772465B5422DF+++79DA790" : "..",
+    "7FDAFA44B3C88DDC31742CBD207772465B5422DF+++F576F9F" : ".."
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "乐账",
   "DVTSourceControlWorkspaceBlueprintVersion" : 204,
@@ -18,12 +23,22 @@
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/iXieYi\/LeZhang.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "2D1ACCEAE732CB96126BBC7C4BE3B2C8143889D2"
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "2D1ACCEAE732CB96126BBC7C4BE3B2C8143889D2+++59065DE"
     },
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/git.oschina.net\/xieyieason\/LeZhang.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "7FDAFA44B3C88DDC31742CBD207772465B5422DF"
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "7FDAFA44B3C88DDC31742CBD207772465B5422DF+++79DA790"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/git.oschina.net\/xieyieason\/LeZhang.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "7FDAFA44B3C88DDC31742CBD207772465B5422DF+++CFEA65C"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/iXieYi\/LeZhang.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "7FDAFA44B3C88DDC31742CBD207772465B5422DF+++F576F9F"
     }
   ]
 }
